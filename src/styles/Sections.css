@@ -1,0 +1,70 @@
+@font-face{
+    font-family: Roboto;
+    src: local(Roboto), url("../public/Roboto-VariableFont_wdth,wght.ttf");
+}
+
+:root{
+    --cardColor: hsl(0, 0%, 100%);
+    --inputColor: hsl(0, 6%, 97%);
+    --borderColor: hsl(180, 4%, 89%);
+    --borderFocusColor: hsl(194, 65%, 70%);
+}
+
+.formSection{
+    border-radius: 10px;
+    width: 30%;
+    height: auto;
+    min-width: 250px;
+    max-width: 475px;
+    margin: 2rem;
+    padding: 0.8rem;
+    border: 1px solid black;
+}
+
+.sectionHeader{
+    display: flex;
+    background-color: var(--cardColor);
+    align-items: center;
+}
+
+h1{
+    font-family: Roboto;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 1% 0;
+}
+
+.inputSection{
+    display: flex;
+    flex-direction: column;
+    padding: 3.2%;
+}
+
+label, input{
+    font-family: Roboto;
+    font-size: 1.1em;
+    padding: 1.5%;
+    margin: 0;
+}
+
+input{
+    border-radius: 5px;
+    background-color: var(--inputColor);
+    border: 1px solid var(--borderColor);
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid var(--borderFocusColor);
+}
+
+.formSection, .inputSection, label, h1{
+    background-color: var(--cardColor);
+}
+
+.logoStyles{
+    height: 30px;
+    width: auto;
+    background-color: var(--cardColor);
+    padding: 2%;
+}
