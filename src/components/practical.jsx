@@ -1,5 +1,4 @@
-import DropdownButton from "./dropdown.jsx"
-import suitcaseLogo from "/public/suitcase.svg";
+import suitcaseLogo from "/suitcase.svg";
 import arrowLogo from "../assets/arrow.svg" 
 import { useState } from "react";
 import "../styles/Sections.css";

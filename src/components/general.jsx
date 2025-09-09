@@ -1,4 +1,4 @@
-import personLogo from "/public/person.svg";
+import personLogo from "/person.svg";
 import arrowLogo from "../assets/arrow.svg" 
 import {useState} from "react"
 import "../styles/Sections.css";
