@@ -5,9 +5,9 @@
 
 :root{
     --cardColor: hsl(0, 0%, 100%);
-    --inputColor: hsl(0, 6%, 97%);
+    --inputColor: hsl(0, 3%, 94%);
     --borderColor: hsl(180, 4%, 89%);
-    --borderFocusColor: hsl(194, 65%, 70%);
+    --borderFocusColor: hsl(208, 68%, 58%);
 }
 
 .formSection{
@@ -67,4 +67,30 @@ input:focus{
     width: auto;
     background-color: var(--cardColor);
     padding: 2%;
+}
+
+.arrowLogoInactive{
+    background-color: var(--cardColor);
+    height: 3.2rem;
+    width: auto;
+    margin-left: auto;
+    transition: 0.2s transform
+}
+
+
+.arrowLogoActive{
+    background-color: var(--cardColor);
+    height: 3.2rem;
+    width: auto;
+    margin-left: auto;
+    transform: rotate(-180deg);
+    transition: 0.2s transform
+}
+
+.sectionVisibilityActive{
+    display: none;
+}
+
+.sectionVisibilityInactive{
+    display: block;
 }

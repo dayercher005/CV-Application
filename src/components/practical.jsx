@@ -1,41 +1,66 @@
+import DropdownButton from "./dropdown.jsx"
 import suitcaseLogo from "/public/suitcase.svg";
+import arrowLogo from "../assets/arrow.svg" 
+import { useState } from "react";
 import "../styles/Sections.css";
 
 function PracticalSection() {
+
+    const [toggleDropdown, setToggleDropdown] = useState(false);
+
+    const Toggle = () => {
+        setToggleDropdown(!toggleDropdown);
+    }
 
     return (
          <div className="formSection">
 
             <form>
 
-                <div className="sectionHeader">
+                <div
+                 className="sectionHeader"
+                 onClick = {Toggle}
+                >
                     <img className="logoStyles" src={suitcaseLogo} />
                     <h1>Work Experience</h1>
-                </div>
-                <div className="inputSection">
-                    <label>Company Name</label>
-                    <input></input>
-                </div>
-
-                <div className="inputSection">
-                    <label>Position</label>
-                    <input></input>
+                    <img
+                     className = { toggleDropdown ? 'arrowLogoInactive' : 'arrowLogoActive'}
+                     src = {arrowLogo}
+                     onClick = {Toggle}
+                    />
                 </div>
 
-                <div className="inputSection">
-                    <label>Start Date</label>
-                    <input type="date"></input>
+                <div
+                 className = {toggleDropdown ? 'sectionVisibilityActive' : 'sectionVisibilityInactive'}
+                >
+
+                    <div className="inputSection">
+                        <label>Company Name</label>
+                        <input></input>
+                    </div>
+
+                    <div className="inputSection">
+                        <label>Position</label>
+                        <input></input>
+                    </div>
+
+                    <div className="inputSection">
+                        <label>Start Date</label>
+                        <input type="date"></input>
+                    </div>
+
+                    <div className="inputSection">
+                        <label>End Date</label>
+                        <input type="date"></input>
+                    </div>
+
+                    <div className="inputSection">
+                        <label>Description</label>
+                        <input></input>
+                    </div>
+
                 </div>
 
-                <div className="inputSection">
-                    <label>End Date</label>
-                    <input type="date"></input>
-                </div>
-
-                <div className="inputSection">
-                    <label>Description</label>
-                    <input></input>
-                </div>
             </form>
 
         </div>
