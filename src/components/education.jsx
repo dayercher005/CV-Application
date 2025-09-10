@@ -7,9 +7,16 @@ function EducationSection() {
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
+    const [form, setForm] = useState({
+        school: "",
+        course: "",
+        date: ""
+    })
+
     const Toggle = () => {
         setToggleDropdown(!toggleDropdown);
     }
+
 
     return (
         <div className="formSection">
@@ -34,18 +41,34 @@ function EducationSection() {
 
                     <div className="inputSection">
                         <label>School</label>
-                        <input></input>
+                        <input
+                            type="text"
+                            value = {form.school}
+                            onChange = {(event) => setForm(event.target.value)}
+                        />
                     </div>
 
                     <div className="inputSection">
                         <label>Course</label>
-                        <input></input>
+                        <input 
+                            type="text"
+                            value = {form.course}
+                            onChange = {(event) => setForm(event.target.value)}
+                        />
                     </div>
 
                     <div className="inputSection">
                         <label>Date of Study</label>
-                        <input type="date"></input>
+                        <input
+                            type="date"
+                            value = {form.date}
+                            onChange = {(event) => setForm(event.target.value)}
+                        />
                     </div>
+
+                    <button className="submitButton">
+                        Submit
+                    </button>
 
                 </div>
 

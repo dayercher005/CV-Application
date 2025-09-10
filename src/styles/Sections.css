@@ -8,15 +8,17 @@
     --inputColor: hsl(0, 3%, 94%);
     --borderColor: hsl(180, 4%, 89%);
     --borderFocusColor: hsl(208, 68%, 58%);
+    --submitButtonColor: hsl(118, 78%, 65%);
+    --submitHoverColor: hsl(118, 65%, 57%);
 }
 
 .formSection{
     border-radius: 10px;
     width: 30%;
     height: auto;
-    min-width: 250px;
-    max-width: 475px;
-    margin: 2rem;
+    min-width: 350px;
+    max-width: 600px;
+    margin: 2rem 0;
     padding: 0.8rem;
     border: 1px solid black;
 }
@@ -89,9 +91,36 @@ input:focus{
 }
 
 .sectionVisibilityActive{
+    transition: 0.2s transform;
     display: none;
 }
 
 .sectionVisibilityInactive{
-    display: block;
+    transform-origin: top;
+    animation: expand 0.1s ;
+    display: flex;
+    flex-direction: column;
 }
+
+.applicationSection{
+    background-color: var(--cardColor);
+    width: 100%;
+    width: 775px;
+    height: 1150px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    box-shadow: 3px 2px 20px 5px hsl(0, 0%, 65%);
+}
+
+.submitButton{
+    background-color: var(--submitButtonColor);
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submitButton:hover{
+    background-color: var(--submitHoverColor);
+}
+

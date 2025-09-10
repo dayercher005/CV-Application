@@ -5,3 +5,9 @@
 *{
   background-color: var(--backgroundColor);
 }
+
+.cvSections{
+  display: flex;
+  justify-content: space-evenly;
+  
+}

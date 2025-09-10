@@ -1,8 +1,14 @@
+
+
 function ApplicationSection() {
 
     return (
-        <div>
+        <div className="applicationSection">
+            <h1
 
+            >
+
+            </h1>
         </div>
     )
 }

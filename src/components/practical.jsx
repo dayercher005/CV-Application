@@ -35,28 +35,44 @@ function PracticalSection() {
 
                     <div className="inputSection">
                         <label>Company Name</label>
-                        <input></input>
+                        <input 
+                            type="text" 
+                        />
                     </div>
 
                     <div className="inputSection">
                         <label>Position</label>
-                        <input></input>
+                        <input
+                            type="text" 
+                        />
                     </div>
 
                     <div className="inputSection">
                         <label>Start Date</label>
-                        <input type="date"></input>
+                        <input 
+                            type="date" 
+                        />
                     </div>
 
                     <div className="inputSection">
                         <label>End Date</label>
-                        <input type="date"></input>
+                        <input 
+                            type="date" 
+                        />
                     </div>
 
                     <div className="inputSection">
                         <label>Description</label>
-                        <input></input>
+                        <input
+                            type="text" 
+                        />
                     </div>
+
+                    <button 
+                        className="submitButton"
+                        onClick>
+                        Submit
+                    </button>
 
                 </div>
 
