@@ -5,11 +5,50 @@ import "../styles/Sections.css";
 
 function PracticalSection() {
 
+    const [section, setSection] = useState({
+        company : "",
+        position: "",
+        startDate: "",
+        endDate: "",
+        description: ""
+    })
+
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     const Toggle = () => {
         setToggleDropdown(!toggleDropdown);
     }
+
+    const EditCompany = (event) => {
+        setSection({
+            ...section, company: event.target.value
+        })
+    }
+
+    const EditPosition = (event) => {
+        setSection({
+            ...section, position: event.target.value
+        })
+    }
+
+    const EditStartDate = (event) => {
+        setSection({
+            ...section, startDate: event.target.value
+        })
+    }
+
+    const EditEndDate = (event) => {
+        setSection({
+            ...section, endDate: event.target.value
+        })
+    }
+
+    const EditDescription = (event) => {
+        setSection({
+            ...section, description: event.target.value
+        })
+    }
+    
 
     return (
          <div className="formSection">
@@ -34,9 +73,11 @@ function PracticalSection() {
                 >
 
                     <div className="inputSection">
-                        <label>Company Name</label>
+                        <label>Company</label>
                         <input 
-                            type="text" 
+                            type="text"
+                            value = {section.company}
+                            onChange = {EditCompany}
                         />
                     </div>
 
@@ -44,27 +85,35 @@ function PracticalSection() {
                         <label>Position</label>
                         <input
                             type="text" 
+                            value = {section.position}
+                            onChange = {EditPosition}
                         />
                     </div>
 
                     <div className="inputSection">
                         <label>Start Date</label>
                         <input 
-                            type="date" 
+                            type="date"
+                            value = {section.startDate}
+                            onChange = {EditStartDate}
                         />
                     </div>
 
                     <div className="inputSection">
                         <label>End Date</label>
                         <input 
-                            type="date" 
+                            type="date"
+                            value = {section.endDate}
+                            onChange = {EditEndDate}
                         />
                     </div>
 
                     <div className="inputSection">
                         <label>Description</label>
                         <input
-                            type="text" 
+                            type="text"
+                            value = {section.description}
+                            onChange = {EditDescription}
                         />
                     </div>
 

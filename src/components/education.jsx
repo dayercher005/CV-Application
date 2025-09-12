@@ -18,15 +18,15 @@ function EducationSection() {
     }
 
     const EditSchool = (event) => {
-        setForm(...form, form.school = event.target.value)
+        setForm({...form, school : event.target.value})
     }
 
     const EditCourse = (event) => {
-        setForm(...form, form.course = event.target.value)
+        setForm({...form, course : event.target.value})
     }
 
     const EditDate = (event) => {
-        setForm(...form, form.date = event.target.value)
+        setForm({...form, date : event.target.value})
     }
 
 

@@ -19,6 +19,24 @@ function GeneralSection() {
         setToggleDropdown(!toggleDropdown);
     }
 
+    const EditName = (event) => {
+        setSection({
+            ...section, name: event.target.value
+        })
+    }
+
+    const EditEmail = (event) => {
+        setSection({
+            ...section, email: event.target.value
+        })
+    }
+
+    const EditPhoneNumber = (event) => {
+        setSection({
+            ...section, phoneNumber: event.target.value
+        })
+    }
+
 
     return (
         <div className="formSection">
@@ -46,7 +64,7 @@ function GeneralSection() {
                     <label>Full name</label>
                     <input 
                         type = "text"
-                        onChange = {(event) => setSection(event.target.value)}
+                        onChange = {EditName}
                         value = {section.name}
                     />
                 </div>
@@ -56,7 +74,7 @@ function GeneralSection() {
                     <input 
                         type = "email"
                         value = {section.email}
-                        onChange = {(event) => setSection(event.target.value)}
+                        onChange = {EditEmail}
                     />
                 </div>
 
@@ -65,7 +83,7 @@ function GeneralSection() {
                     <input 
                         type = "tel"
                         value = {section.phoneNumber}
-                        onChange = {(event) => setSection(event.target.value)}
+                        onChange = {EditPhoneNumber}
                     />
                 </div>
 
