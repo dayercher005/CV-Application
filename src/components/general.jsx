@@ -8,11 +8,12 @@ function GeneralSection() {
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
-    const [form, setForm] = useState({
+    const [section, setSection] = useState({
         name: "",
         email: "",
         phoneNumber: ""
     })
+
     
     const Toggle = () => {
         setToggleDropdown(!toggleDropdown);
@@ -45,8 +46,8 @@ function GeneralSection() {
                     <label>Full name</label>
                     <input 
                         type = "text"
-                        value = {form.name}
-                        onChange = {(event) => setForm(event.target.value)}
+                        onChange = {(event) => setSection(event.target.value)}
+                        value = {section.name}
                     />
                 </div>
 
@@ -54,8 +55,8 @@ function GeneralSection() {
                     <label>Email</label>
                     <input 
                         type = "email"
-                        value = {form.email}
-                        onChange = {(event) => setForm(event.target.value)}
+                        value = {section.email}
+                        onChange = {(event) => setSection(event.target.value)}
                     />
                 </div>
 
@@ -63,8 +64,8 @@ function GeneralSection() {
                     <label>Phone Number</label>
                     <input 
                         type = "tel"
-                        value = {form.phoneNumber}
-                        onChange = {(event) => setForm(event.target.value)}
+                        value = {section.phoneNumber}
+                        onChange = {(event) => setSection(event.target.value)}
                     />
                 </div>
 

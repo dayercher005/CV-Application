@@ -1,6 +1,8 @@
-
+import { useState } from 'react'
 
 function ApplicationSection() {
+
+    
 
     return (
         <div className="applicationSection">

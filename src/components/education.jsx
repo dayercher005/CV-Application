@@ -17,6 +17,18 @@ function EducationSection() {
         setToggleDropdown(!toggleDropdown);
     }
 
+    const EditSchool = (event) => {
+        setForm(...form, form.school = event.target.value)
+    }
+
+    const EditCourse = (event) => {
+        setForm(...form, form.course = event.target.value)
+    }
+
+    const EditDate = (event) => {
+        setForm(...form, form.date = event.target.value)
+    }
+
 
     return (
         <div className="formSection">
@@ -44,7 +56,7 @@ function EducationSection() {
                         <input
                             type="text"
                             value = {form.school}
-                            onChange = {(event) => setForm(event.target.value)}
+                            onChange = {EditSchool}
                         />
                     </div>
 
@@ -53,7 +65,8 @@ function EducationSection() {
                         <input 
                             type="text"
                             value = {form.course}
-                            onChange = {(event) => setForm(event.target.value)}
+                            onChange = {EditCourse}
+                            
                         />
                     </div>
 
@@ -62,7 +75,7 @@ function EducationSection() {
                         <input
                             type="date"
                             value = {form.date}
-                            onChange = {(event) => setForm(event.target.value)}
+                            onChange = {EditDate}
                         />
                     </div>
 
