@@ -4,7 +4,7 @@ import {useState} from "react";
 
 import "../styles/Sections.css";
 
-function GeneralSection({onDataSend}) {
+function GeneralSection({sendGeneralSectionDetails}) {
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
@@ -37,8 +37,9 @@ function GeneralSection({onDataSend}) {
         })
     }
 
-    const sendDataToParent = () => {
-        onDataSend(section);
+
+    const DisplayGeneralSectionData = () => {
+        sendGeneralSectionDetails(section);
     }
 
     const ButtonHandler = (event) => {
@@ -99,7 +100,7 @@ function GeneralSection({onDataSend}) {
                 <button 
                     className="submitButton"
                     type="button"
-                    onClick = {sendDataToParent}
+                    onClick = {DisplayGeneralSectionData}
                     >
                     Submit
                 </button>

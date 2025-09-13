@@ -3,7 +3,7 @@ import arrowLogo from "../assets/arrow.svg"
 import { useState } from "react";
 import "../styles/Sections.css";
 
-function PracticalSection({onDataSend}) {
+function PracticalSection({sendPracticalSectionData}) {
 
     const [section, setSection] = useState({
         company : "",
@@ -49,8 +49,8 @@ function PracticalSection({onDataSend}) {
         })
     }
 
-    const sendDataToParent = () => {
-        onDataSend(section)
+    const DisplayPracticalSectionData = () => {
+        sendPracticalSectionData(section)
     }
     
 
@@ -123,7 +123,7 @@ function PracticalSection({onDataSend}) {
 
                     <button 
                         className="submitButton"
-                        onClick = {sendDataToParent}>
+                        onClick = {DisplayPracticalSectionData}>
                         Submit
                     </button>
 

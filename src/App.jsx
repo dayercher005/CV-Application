@@ -28,15 +28,15 @@ function App() {
       <div className="editingSections">
 
         <GeneralSection 
-          onDataSend = {sendGeneralData}
+          sendGeneralSectionDetails = {sendGeneralData}
         />
 
         <EducationSection
-          onDataSend = {sendEducationData}  
+          sendEducationSectionDetails = {sendEducationData}  
         />
 
         <PracticalSection 
-          onDataSend = {sendPracticalData}
+          sendPracticalSectionDetails = {sendPracticalData}
         />
 
       </div>
