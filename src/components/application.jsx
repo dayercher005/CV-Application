@@ -1,6 +1,6 @@
-import { useState } from 'react'
-
-function ApplicationSection() {
+function ApplicationSection(
+    {generalSection, educationSection, practicalSection}
+) {
 
     
 
@@ -9,7 +9,11 @@ function ApplicationSection() {
             <h1
 
             >
-
+                {generalSection.name}
+                {generalSection.phoneNumber}
+                {generalSection.email}
+                {educationSection}
+                {practicalSection}
             </h1>
         </div>
     )

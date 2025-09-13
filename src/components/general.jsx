@@ -4,7 +4,7 @@ import {useState} from "react";
 
 import "../styles/Sections.css";
 
-function GeneralSection() {
+function GeneralSection({onDataSend}) {
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
@@ -37,11 +37,20 @@ function GeneralSection() {
         })
     }
 
+    const sendDataToParent = () => {
+        onDataSend(section);
+    }
+
+    const ButtonHandler = (event) => {
+        event.preventDefault();
+    }
 
     return (
         <div className="formSection">
 
-            <form>
+            <form
+                onSubmit = {ButtonHandler}
+            >
 
                 <div
                  className="sectionHeader"
@@ -89,6 +98,8 @@ function GeneralSection() {
 
                 <button 
                     className="submitButton"
+                    type="button"
+                    onClick = {sendDataToParent}
                     >
                     Submit
                 </button>
