@@ -1,5 +1,32 @@
 # CV-Application
 
+
+## How to Run
+
+1. Clone the repository:
+```bash
+git clone 
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start Development Server:
+```bash
+npm run dev
+```
+
+4. Open `http://localHost:5173` in your browser
+
+---
+
+*Part of The Odin Project's [React Course]
+([https://www.theodinproject.com/lessons/node-path-react-new-cv-application])*
+
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
@@ -10,3 +37,5 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
