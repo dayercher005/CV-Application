@@ -11,7 +11,9 @@ function GeneralSection({sendGeneralSectionDetails}) {
     const [section, setSection] = useState({
         name: "Javier Chua",
         email: "javierchua123@gmail.com",
-        phoneNumber: "+65 9876 5432"
+        phoneNumber: "+65 9876 5432",
+        location: "Singapore",
+        linkedin: ""
     })
 
     
@@ -34,6 +36,18 @@ function GeneralSection({sendGeneralSectionDetails}) {
     const EditPhoneNumber = (event) => {
         setSection({
             ...section, phoneNumber: event.target.value
+        })
+    }
+
+    const EditLocation = (event) => {
+        setSection({
+            ...section, location: event.target.value
+        })
+    }
+
+    const EditLinkedin = (event) => {
+        setSection({
+            ...section, linkedin: event.target.value
         })
     }
 
@@ -97,6 +111,26 @@ function GeneralSection({sendGeneralSectionDetails}) {
                         placeholder="+65 9876 5432"
                         value = {section.phoneNumber}
                         onChange = {EditPhoneNumber}
+                    />
+                </div>
+
+                <div className="inputSection">
+                    <label>Location</label>
+                    <input 
+                        type = "text"
+                        placeholder="Singapore"
+                        value = {section.phoneNumber}
+                        onChange = {EditLocation}
+                    />
+                </div>
+
+                <div className="inputSection">
+                    <label>Linkedin URL</label>
+                    <input 
+                        type = "text"
+                        placeholder="https://www.linkedin.com"
+                        value = {section.linkedin}
+                        onChange = {EditLinkedin}
                     />
                 </div>
 

@@ -1,3 +1,5 @@
+import educationLogo from "/education.svg";
+
 function ApplicationSection(
     {generalSection, educationSection, practicalSection}
 ) {
@@ -6,6 +8,34 @@ function ApplicationSection(
 
     return (
         <div className="applicationSection">
+
+            <div
+                className = "sideDisplay"
+            >
+                <h2
+                    className="contactHeader"
+                    styles="font-family: sans-serif;"
+                >
+                    Contact
+                </h2>
+
+                <p>
+                    {generalSection.phoneNumber}
+                </p>
+
+                <p>
+                    {generalSection.email}
+                </p>
+
+                <p>
+                    {generalSection.location}
+                </p>
+
+                <p>
+                    {generalSection.linkedin}
+                </p>
+
+            </div>
 
             <div
                 className="mainDisplay"
@@ -24,15 +54,24 @@ function ApplicationSection(
                     {practicalSection.position}
                 </h2>
 
-                <h3>
-                    Professional Summary
+                <h3
+                    className="mainDisplayTitles"
+                >
+                    <img />
+                    Profile Summary
                 </h3>
                 <p
                 className = "displayDescription">
                     {practicalSection.description}
                 </p>
 
-                <h3>
+                <h3
+                    className="mainDisplayTitles"
+                >
+                    <img 
+                        src={educationLogo}
+                        className = "educationLogo"
+                    />
                     Education
                 </h3>
                 <h4>
@@ -40,6 +79,8 @@ function ApplicationSection(
                 </h4>
                 <p>
                     {educationSection.school}
+                </p>
+                <p>
                     {educationSection.date}
                 </p>
 

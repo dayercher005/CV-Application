@@ -3,18 +3,14 @@ import arrowLogo from "../assets/arrow.svg"
 import { useState } from "react";
 import "../styles/Sections.css";
 
-function PracticalSection({sendPracticalSectionData}) {
+function PracticalSection({sendPracticalSectionDetails}) {
 
     const [section, setSection] = useState({
         company : "Accenture",
         position: "Senior Consultant",
         startDate: "01/02/2020",
         endDate: "01/02/2024",
-        description: `Lead client engagements by identifying business challenges, developing tailored solutions,
-                        and delivering strategic recommendations to drive operational efficiency and growth.
-                        Manage cross-functional teams and collaborate with stakeholders across all levels to ensure project alignment, timely delivery, and measurable impact.
-                        Conduct in-depth data analysis, market research, and process assessments to uncover improvement opportunities and support evidence-based decision-making.
-                        Facilitate client workshops, presentations, and executive briefings to communicate findings and strategic insights`
+        description: `Lead client engagements by identifying business challenges, developing tailored solutions, and delivering strategic recommendations to drive operational efficiency and growth. Manage cross-functional teams and collaborate with stakeholders across all levels to ensure project alignment, timely delivery, and measurable impact. Conduct in-depth data analysis, market research, and process assessments to uncover improvement opportunities and support evidence-based decision-making. Facilitate client workshops, presentations, and executive briefings to communicate findings and strategic insights`
     })
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -54,7 +50,7 @@ function PracticalSection({sendPracticalSectionData}) {
     }
 
     const DisplayPracticalSectionData = () => {
-        sendPracticalSectionData(section)
+        sendPracticalSectionDetails(section)
     }
 
     const ButtonHandler = (event) => {

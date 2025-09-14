@@ -3,7 +3,7 @@ import { useState } from "react";
 import arrowLogo from "../assets/arrow.svg" 
 import "../styles/Sections.css";
 
-function EducationSection({sendEducationSectionData}) {
+function EducationSection({sendEducationSectionDetails}) {
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
@@ -30,7 +30,7 @@ function EducationSection({sendEducationSectionData}) {
     }
 
     const DisplayEducationSectionData = () => {
-        sendEducationSectionData(form)
+        sendEducationSectionDetails(form)
     }
 
     const ButtonHandler = (event) => {
