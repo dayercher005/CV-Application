@@ -8,9 +8,9 @@ function EducationSection({sendEducationSectionData}) {
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     const [form, setForm] = useState({
-        school: "",
-        course: "",
-        date: ""
+        school: "University of Bristole",
+        course: "Bachelor of Social Sciences (Honours), major in Psychology",
+        date: "01/07/2015"
     })
 
     const Toggle = () => {
@@ -33,11 +33,16 @@ function EducationSection({sendEducationSectionData}) {
         sendEducationSectionData(form)
     }
 
+    const ButtonHandler = (event) => {
+        event.preventDefault();
+    }
 
     return (
         <div className="formSection">
 
-            <form>
+            <form
+                onSubmit = {ButtonHandler}
+            >
                 <div
                  className="sectionHeader"
                  onClick = {Toggle}
@@ -59,6 +64,7 @@ function EducationSection({sendEducationSectionData}) {
                         <label>School</label>
                         <input
                             type="text"
+                            placeholder="University of Bristole"
                             value = {form.school}
                             onChange = {EditSchool}
                         />
@@ -68,6 +74,7 @@ function EducationSection({sendEducationSectionData}) {
                         <label>Course</label>
                         <input 
                             type="text"
+                            placeholder="Bachelor of Social Sciences (Honours), major in Psychology"
                             value = {form.course}
                             onChange = {EditCourse}
                             
@@ -78,6 +85,7 @@ function EducationSection({sendEducationSectionData}) {
                         <label>Date of Study</label>
                         <input
                             type="date"
+                            placeholder="01/07/2015"
                             value = {form.date}
                             onChange = {EditDate}
                         />

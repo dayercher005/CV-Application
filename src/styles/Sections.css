@@ -56,6 +56,14 @@ input{
     border: 1px solid var(--borderColor);
 }
 
+textarea{
+    background-color: var(--inputColor);
+    padding: 2.5%;
+    min-height: 8rem;
+    font-size: 1.15rem;
+    font-family: Roboto;
+}
+
 input:focus{
     outline: none;
     border: 2px solid var(--borderFocusColor);
@@ -111,6 +119,10 @@ input:focus{
     justify-content: center;
     margin-top: 3%;
     box-shadow: 3px 2px 20px 5px hsl(0, 0%, 65%);
+}
+
+.applicationSection *{
+    background-color: var(--cardColor);
 }
 
 .submitButton{

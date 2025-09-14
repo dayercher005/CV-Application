@@ -9,9 +9,9 @@ function GeneralSection({sendGeneralSectionDetails}) {
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     const [section, setSection] = useState({
-        name: "",
-        email: "",
-        phoneNumber: ""
+        name: "Javier Chua",
+        email: "javierchua123@gmail.com",
+        phoneNumber: "+65 9876 5432"
     })
 
     
@@ -74,6 +74,7 @@ function GeneralSection({sendGeneralSectionDetails}) {
                     <label>Full name</label>
                     <input 
                         type = "text"
+                        placeholder="Javier Chua"
                         onChange = {EditName}
                         value = {section.name}
                     />
@@ -83,6 +84,7 @@ function GeneralSection({sendGeneralSectionDetails}) {
                     <label>Email</label>
                     <input 
                         type = "email"
+                        placeholder="javierchua123@gmail.com"
                         value = {section.email}
                         onChange = {EditEmail}
                     />
@@ -92,6 +94,7 @@ function GeneralSection({sendGeneralSectionDetails}) {
                     <label>Phone Number</label>
                     <input 
                         type = "tel"
+                        placeholder="+65 9876 5432"
                         value = {section.phoneNumber}
                         onChange = {EditPhoneNumber}
                     />

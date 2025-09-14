@@ -6,15 +6,45 @@ function ApplicationSection(
 
     return (
         <div className="applicationSection">
-            <h1
 
+            <div
+                className="mainDisplay"
             >
-                {generalSection.name}
-                {generalSection.phoneNumber}
-                {generalSection.email}
-                {educationSection}
-                {practicalSection}
-            </h1>
+
+                <h1
+                    className="displayName"
+                >
+                    {generalSection.name}
+
+                </h1>
+
+                <h2
+                    className="displayPosition"
+                >
+                    {practicalSection.position}
+                </h2>
+
+                <h3>
+                    Professional Summary
+                </h3>
+                <p
+                className = "displayDescription">
+                    {practicalSection.description}
+                </p>
+
+                <h3>
+                    Education
+                </h3>
+                <h4>
+                    {educationSection.course}
+                </h4>
+                <p>
+                    {educationSection.school}
+                    {educationSection.date}
+                </p>
+
+            </div>
+
         </div>
     )
 }
