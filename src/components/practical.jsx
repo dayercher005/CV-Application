@@ -10,7 +10,7 @@ function PracticalSection({sendPracticalSectionDetails}) {
         position: "Senior Consultant",
         startDate: "01/02/2020",
         endDate: "01/02/2024",
-        description: `Lead client engagements by identifying business challenges, developing tailored solutions, and delivering strategic recommendations to drive operational efficiency and growth. Manage cross-functional teams and collaborate with stakeholders across all levels to ensure project alignment, timely delivery, and measurable impact. Conduct in-depth data analysis, market research, and process assessments to uncover improvement opportunities and support evidence-based decision-making. Facilitate client workshops, presentations, and executive briefings to communicate findings and strategic insights`
+        description: "Junior IT Consultant with 2+ years of experience leading digital transformation projects for enterprise clients across finance and retail sectors. Expertise in cloud strategy, systems integration, and agile delivery. Adept at collaborating with stakeholders to align technology solutions with business goals. Known for bridging the gap between technical teams and executive leadership to deliver scalable and cost-effective solutions."
     })
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -126,11 +126,7 @@ function PracticalSection({sendPracticalSectionDetails}) {
                         <label>Description</label>
                         <textarea
                             type="text"
-                            placeholder="Lead client engagements by identifying business challenges, developing tailored solutions, 
-                            and delivering strategic recommendations to drive operational efficiency and growth.
-                            Manage cross-functional teams and collaborate with stakeholders across all levels to ensure project alignment, timely delivery, and measurable impact.
-                            Conduct in-depth data analysis, market research, and process assessments to uncover improvement opportunities and support evidence-based decision-making.
-                            Facilitate client workshops, presentations, and executive briefings to communicate findings and strategic insights."
+                            placeholder=""
                             value = {section.description}
                             onChange = {EditDescription}
                         />

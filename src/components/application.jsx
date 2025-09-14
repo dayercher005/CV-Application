@@ -1,4 +1,10 @@
 import educationLogo from "/education.svg";
+import personLogo from "/person.svg";
+import suitcaseLogo from "/suitcase.svg";
+import emailLogo from "/email.svg";
+import locationLogo from "/location.svg";
+import phoneLogo from "/phone.svg";
+import linkedinLogo from "/linkedin.svg";
 
 function ApplicationSection(
     {generalSection, educationSection, practicalSection}
@@ -19,28 +25,60 @@ function ApplicationSection(
                     Contact
                 </h2>
 
-                <p>
-                    {generalSection.phoneNumber}
-                </p>
+                <div className="contactDetailPortion">
 
-                <p>
-                    {generalSection.email}
-                </p>
+                    <img 
+                        src={phoneLogo}
+                        className="applicationLogos sideLogos"
+                    />
+                    <p>
+                        {generalSection.phoneNumber}
+                    </p>
 
-                <p>
-                    {generalSection.location}
-                </p>
+                </div>
 
-                <p>
-                    {generalSection.linkedin}
-                </p>
+                <div className="contactDetailPortion">
+
+                    <img 
+                        src={emailLogo}
+                        className="applicationLogos sideLogos"
+                    />
+                    <p>
+                        {generalSection.email}
+                    </p>
+
+                </div>
+
+                <div className="contactDetailPortion">
+
+                    <img 
+                        src={locationLogo}
+                        className="applicationLogos sideLogos"
+                    />
+                    <p>
+                        {generalSection.location}
+                    </p>
+
+                </div>
+
+                <div className="contactDetailPortion">
+
+                    <img 
+                        src={linkedinLogo}
+                        className="applicationLogos sideLogos"
+                    />
+                    <p>
+                        {generalSection.linkedin}
+                    </p>
+
+                </div>
 
             </div>
 
             <div
                 className="mainDisplay"
             >
-
+                
                 <h1
                     className="displayName"
                 >
@@ -54,35 +92,75 @@ function ApplicationSection(
                     {practicalSection.position}
                 </h2>
 
-                <h3
-                    className="mainDisplayTitles"
+                <div
+                    className="applicationProfileSummarySection"
                 >
-                    <img />
-                    Profile Summary
-                </h3>
-                <p
-                className = "displayDescription">
-                    {practicalSection.description}
-                </p>
 
-                <h3
-                    className="mainDisplayTitles"
+                    <h3
+                        className="mainDisplayTitles"
+                    >
+                        <img 
+                            src={personLogo}
+                            className="applicationLogos"    
+                        />
+                        Profile Summary
+                    </h3>
+
+                    <p
+                    className = "displayDescription">
+                        {generalSection.profileSummary}
+                    </p>
+
+                </div>
+
+
+                <div
+                    className="applicationPracticalSection"
                 >
-                    <img 
-                        src={educationLogo}
-                        className = "educationLogo"
-                    />
-                    Education
-                </h3>
-                <h4>
-                    {educationSection.course}
-                </h4>
-                <p>
-                    {educationSection.school}
-                </p>
-                <p>
-                    {educationSection.date}
-                </p>
+
+                    <h3
+                        className="mainDisplayTitles"
+                    >
+                        <img
+                            src={suitcaseLogo}
+                            className="applicationLogos"
+                        />
+                        Experience
+                    </h3>
+
+                    <h4>
+                        {practicalSection.company}
+                    </h4>
+                    <p>
+                        {practicalSection.position}
+                    </p>
+                </div>
+
+
+                <div
+                    className="applicationEducationSection"
+                >
+
+                    <h3
+                        className="mainDisplayTitles"
+                    >
+                        <img 
+                            src={educationLogo}
+                            className = "applicationLogos"
+                        />
+                        Education
+                    </h3>
+                    <h4>
+                        {educationSection.course}
+                    </h4>
+                    <p>
+                        {educationSection.school}
+                    </p>
+                    <p>
+                        {educationSection.date}
+                    </p>
+
+                </div>
 
             </div>
 

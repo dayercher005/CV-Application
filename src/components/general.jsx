@@ -13,7 +13,8 @@ function GeneralSection({sendGeneralSectionDetails}) {
         email: "javierchua123@gmail.com",
         phoneNumber: "+65 9876 5432",
         location: "Singapore",
-        linkedin: ""
+        linkedin: "",
+        profileSummary: `Lead client engagements by identifying business challenges, developing tailored solutions, and delivering strategic recommendations to drive operational efficiency and growth. Manage cross-functional teams and collaborate with stakeholders across all levels to ensure project alignment, timely delivery, and measurable impact. Conduct in-depth data analysis, market research, and process assessments to uncover improvement opportunities and support evidence-based decision-making. Facilitate client workshops, presentations, and executive briefings to communicate findings and strategic insights.`
     })
 
     
@@ -48,6 +49,12 @@ function GeneralSection({sendGeneralSectionDetails}) {
     const EditLinkedin = (event) => {
         setSection({
             ...section, linkedin: event.target.value
+        })
+    }
+
+    const EditProfileSummary = (event) => {
+        setSection({
+            ...section, profileSummary: event.target.value
         })
     }
 
@@ -131,6 +138,16 @@ function GeneralSection({sendGeneralSectionDetails}) {
                         placeholder="https://www.linkedin.com"
                         value = {section.linkedin}
                         onChange = {EditLinkedin}
+                    />
+                </div>
+
+                <div className="inputSection">
+                    <label>Profile Summary</label>
+                    <textarea 
+                        type = "text"
+                        placeholder=""
+                        value = {section.profileSummary}
+                        onChange = {EditProfileSummary}
                     />
                 </div>
 

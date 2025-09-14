@@ -140,13 +140,18 @@ input:focus{
 .sideDisplay{
     background-color: var(--sideDisplayColor);
     flex-grow: 0.15;
-    min-width: 220px;
+    min-width: 250px;
 }
 
 .sideDisplay *{
     background-color: var(--sideDisplayColor);
     padding: 0 5%;
     color: var(--cardColor);
+}
+
+.contactDetailPortion{
+    display: flex;
+    align-items: center;
 }
 
 .contactHeader{
@@ -179,8 +184,12 @@ input:focus{
     border-bottom: 5px solid var(--sideDisplayColor);
 }
 
-.educationLogo{
-    height: 1.1rem;
+.applicationLogos{
+    height: 1rem;
     width: auto; 
-    margin: 0 2%;
+    margin: 0 2.5%;
+}
+
+.sideLogos{
+    margin: 0;
 }
