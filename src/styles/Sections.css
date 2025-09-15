@@ -12,6 +12,7 @@
     --submitHoverColor: hsl(118, 65%, 57%);
     --sideDisplayColor: hsl(232, 24%, 30%);
     --sideMargin: 2.5rem;
+    --segmentHoverColor: hsl(208, 68%, 45%);
 }
 
 .formSection{
@@ -155,7 +156,7 @@ input:focus{
 }
 
 .contactHeader{
-    border-bottom: 5px solid var(--cardColor);
+    border-bottom: 5px solid var(--borderColor);
     margin: 1rem;
     padding: 0.5rem;
 }
@@ -202,4 +203,24 @@ input:focus{
 .positionText{
     font-size: 1.2rem;
     color: var(--borderFocusColor)
+}
+
+.segmentContainer{
+    background-color: var(--cardColor);
+}
+
+
+.submittedSegment{
+    font-family: Roboto;
+    background-color: var(--borderFocusColor);
+    text-align: center;
+    padding: 2%;
+    margin: 0.8rem;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.submittedSegment:hover{
+    background-color: var(--segmentHoverColor);
+    transform: translateY(-3.5px);
 }

@@ -5,6 +5,8 @@ import "../styles/Sections.css";
 
 function PracticalSection({sendPracticalSectionDetails}) {
 
+    const [practicalSectionList, setPracticalSectionList] = useState([]);
+
     const [section, setSection] = useState({
         company : "Accenture pte ltd",
         position: "Senior Consultant",
@@ -51,11 +53,20 @@ function PracticalSection({sendPracticalSectionDetails}) {
 
     const DisplayPracticalSectionData = () => {
         sendPracticalSectionDetails(section)
+        AddPracticalExperience();
     }
 
     const ButtonHandler = (event) => {
         event.preventDefault();
     }
+
+    const AddPracticalExperience = () => {
+        setPracticalSectionList([...practicalSectionList, section]);
+    }
+
+    const PracticalPositions = practicalSectionList.map((section) => 
+        <div className="submittedSegment">{section.position}</div> 
+    )
     
 
     return (
@@ -141,6 +152,12 @@ function PracticalSection({sendPracticalSectionDetails}) {
                 </div>
 
             </form>
+
+            <div
+                className="segmentContainer"
+            >
+                {PracticalPositions}
+            </div>
 
         </div>
     )

@@ -5,11 +5,13 @@ import "../styles/Sections.css";
 
 function EducationSection({sendEducationSectionDetails}) {
 
+    const [educationSectionList, setEducationSectionList] = useState([]);
+
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     const [form, setForm] = useState({
-        school: "University of Bristole",
-        course: "Bachelor of Social Sciences (Honours), major in Psychology",
+        school: "University of Bristol",
+        course: "Bachelor of Social Sciences, major in Psychology",
         date: "01/07/2015"
     })
 
@@ -30,11 +32,22 @@ function EducationSection({sendEducationSectionDetails}) {
     }
 
     const DisplayEducationSectionData = () => {
-        sendEducationSectionDetails(form)
+        sendEducationSectionDetails(form);
+        AddEducationExperience();
     }
 
     const ButtonHandler = (event) => {
         event.preventDefault();
+    }
+
+    const EducationInstitutions = educationSectionList.map((section) => 
+        <div className="submittedSegment">{section.school}</div> 
+    )
+
+    const AddEducationExperience = () => {
+        setEducationSectionList(
+            [...educationSectionList, form]
+        );
     }
 
     return (
@@ -64,7 +77,7 @@ function EducationSection({sendEducationSectionDetails}) {
                         <label>School</label>
                         <input
                             type="text"
-                            placeholder="University of Bristole"
+                            placeholder="University of Bristol"
                             value = {form.school}
                             onChange = {EditSchool}
                         />
@@ -74,7 +87,7 @@ function EducationSection({sendEducationSectionDetails}) {
                         <label>Course</label>
                         <input 
                             type="text"
-                            placeholder="Bachelor of Social Sciences (Honours), major in Psychology"
+                            placeholder="Bachelor of Social Sciences, major in Psychology"
                             value = {form.course}
                             onChange = {EditCourse}
                             
@@ -100,6 +113,12 @@ function EducationSection({sendEducationSectionDetails}) {
                 </div>
 
             </form>
+
+            <div
+                className="segmentContainer"
+            >
+                {EducationInstitutions}
+            </div>
 
         </div>
     )
