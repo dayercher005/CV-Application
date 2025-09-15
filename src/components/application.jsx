@@ -128,12 +128,22 @@ function ApplicationSection(
                         Experience
                     </h3>
 
-                    <h4>
-                        {practicalSection.company}
-                    </h4>
-                    <p>
+                    <h4
+                        className="positionText"
+                    >
                         {practicalSection.position}
+                    </h4>
+
+                    <h5
+                        className="companyText"
+                    >
+                        {practicalSection.company}
+                    </h5>
+
+                    <p>
+                        {practicalSection.description}
                     </p>
+
                 </div>
 
 
@@ -150,6 +160,7 @@ function ApplicationSection(
                         />
                         Education
                     </h3>
+
                     <h4>
                         {educationSection.course}
                     </h4>

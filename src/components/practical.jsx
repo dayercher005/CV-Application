@@ -6,7 +6,7 @@ import "../styles/Sections.css";
 function PracticalSection({sendPracticalSectionDetails}) {
 
     const [section, setSection] = useState({
-        company : "Accenture",
+        company : "Accenture pte ltd",
         position: "Senior Consultant",
         startDate: "01/02/2020",
         endDate: "01/02/2024",
@@ -96,7 +96,7 @@ function PracticalSection({sendPracticalSectionDetails}) {
                         <label>Position</label>
                         <input
                             type="text" 
-                            placeholder="Senior Consultant"
+                            placeholder="Junior Consultant"
                             value = {section.position}
                             onChange = {EditPosition}
                         />
@@ -123,7 +123,7 @@ function PracticalSection({sendPracticalSectionDetails}) {
                     </div>
 
                     <div className="inputSection">
-                        <label>Description</label>
+                        <label>Job Description</label>
                         <textarea
                             type="text"
                             placeholder=""
