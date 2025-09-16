@@ -8,9 +8,17 @@ import linkedinLogo from "/linkedin.svg";
 
 function ApplicationSection(
     {generalSection, educationSection, practicalSection}
-) {
-
+) {    
     
+    const EducationSectionGenerator = educationSection.map((section) =>
+        
+        <>
+            <h4>{section.school}</h4>
+            <p>{section.course}</p>
+            <p>{section.date}</p>
+        </>
+
+    )
 
     return (
         <div className="applicationSection">
@@ -161,15 +169,9 @@ function ApplicationSection(
                         Education
                     </h3>
 
-                    <h4>
-                        {educationSection.course}
-                    </h4>
-                    <p>
-                        {educationSection.school}
-                    </p>
-                    <p>
-                        {educationSection.date}
-                    </p>
+                    <div>
+                        {EducationSectionGenerator}
+                    </div>
 
                 </div>
 

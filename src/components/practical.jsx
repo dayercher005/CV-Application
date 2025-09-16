@@ -12,7 +12,8 @@ function PracticalSection({sendPracticalSectionDetails}) {
         position: "Senior Consultant",
         startDate: "01/02/2020",
         endDate: "01/02/2024",
-        description: "Junior IT Consultant with 2+ years of experience leading digital transformation projects for enterprise clients across finance and retail sectors. Expertise in cloud strategy, systems integration, and agile delivery. Adept at collaborating with stakeholders to align technology solutions with business goals. Known for bridging the gap between technical teams and executive leadership to deliver scalable and cost-effective solutions."
+        description: "Junior IT Consultant with 2+ years of experience leading digital transformation projects for enterprise clients across finance and retail sectors. Expertise in cloud strategy, systems integration, and agile delivery. Adept at collaborating with stakeholders to align technology solutions with business goals. Known for bridging the gap between technical teams and executive leadership to deliver scalable and cost-effective solutions.",
+        id: crypto.randomUUID()
     })
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -52,8 +53,8 @@ function PracticalSection({sendPracticalSectionDetails}) {
     }
 
     const DisplayPracticalSectionData = () => {
-        sendPracticalSectionDetails(section)
-        AddPracticalExperience();
+        AddPracticalExperience()
+        sendPracticalSectionDetails(section);
     }
 
     const ButtonHandler = (event) => {
@@ -65,7 +66,7 @@ function PracticalSection({sendPracticalSectionDetails}) {
     }
 
     const PracticalPositions = practicalSectionList.map((section) => 
-        <div className="submittedSegment">{section.position}</div> 
+        <div key={section.id} className="submittedSegment">{section.position}</div> 
     )
     
 

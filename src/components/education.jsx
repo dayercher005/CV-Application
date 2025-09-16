@@ -5,7 +5,12 @@ import "../styles/Sections.css";
 
 function EducationSection({sendEducationSectionDetails}) {
 
-    const [educationSectionList, setEducationSectionList] = useState([]);
+    const [educationSectionList, setEducationSectionList] = useState([{
+        school: "University of Bristol",
+        course: "Bachelor of Social Sciences, major in Psychology",
+        date: "01/07/2015",
+        id: crypto.randomUUID()
+    }]);
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
@@ -32,8 +37,8 @@ function EducationSection({sendEducationSectionDetails}) {
     }
 
     const DisplayEducationSectionData = () => {
-        sendEducationSectionDetails(form);
         AddEducationExperience();
+        sendEducationSectionDetails(educationSectionList);
     }
 
     const ButtonHandler = (event) => {
@@ -41,13 +46,15 @@ function EducationSection({sendEducationSectionDetails}) {
     }
 
     const EducationInstitutions = educationSectionList.map((section) => 
-        <div className="submittedSegment">{section.school}</div> 
+        <div key={section.id} className="submittedSegment">{section.school}</div> 
     )
 
     const AddEducationExperience = () => {
-        setEducationSectionList(
+        const newObject = setEducationSectionList(
             [...educationSectionList, form]
-        );
+        )
+
+        return newObject
     }
 
     return (

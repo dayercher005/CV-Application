@@ -8,7 +8,11 @@ import './styles/App.css';
 function App() {
 
   const [generalData, setGeneralData] = useState("");
-  const [educationData, setEducationData] = useState("");
+  const [educationData, setEducationData] = useState([{
+        school: "University of Bristol",
+        course: "Bachelor of Social Sciences, major in Psychology",
+        date: "01/07/2015"
+    }]);
   const [practicalData, setPracticalData] = useState("");
 
   const sendGeneralData = (data) => {
