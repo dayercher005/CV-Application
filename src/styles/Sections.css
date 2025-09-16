@@ -214,13 +214,25 @@ input:focus{
     font-family: Roboto;
     background-color: var(--borderFocusColor);
     text-align: center;
-    padding: 2%;
-    margin: 0.8rem;
-    border-radius: 5px;
-    transition: transform 0.3s;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    flex-grow: 2;
+    color: var(--cardColor);
 }
 
-.submittedSegment:hover{
-    background-color: var(--segmentHoverColor);
-    transform: translateY(-3.5px);
+.segmentDiv{
+    display: flex;
+    align-items: center;
+    margin: 2%;
+    border-radius: 5px;
+    background-color: var(--borderFocusColor);
+}
+
+.segmentDiv *{
+    background-color: var(--borderFocusColor);
+}
+
+.deleteLogo{
+    height: 1.5rem;
+    width: auto;
 }

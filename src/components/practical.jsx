@@ -1,6 +1,7 @@
 import suitcaseLogo from "/suitcase.svg";
 import arrowLogo from "../assets/arrow.svg" 
 import { useState } from "react";
+import deleteLogo from "/delete.svg"
 import "../styles/Sections.css";
 
 function PracticalSection({sendPracticalSectionDetails}) {
@@ -73,7 +74,10 @@ function PracticalSection({sendPracticalSectionDetails}) {
     }
 
     const PracticalPositions = practicalSectionList.map((section) => 
-        <div key={section.id} className="submittedSegment">{section.position}</div> 
+        <div className="segmentDiv">
+            <div key={section.id} className="submittedSegment">{section.position}</div>
+            <img src={deleteLogo} className="deleteLogo"/>
+        </div>
     )
     
 

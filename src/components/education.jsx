@@ -1,6 +1,7 @@
 import educationLogo from "/education.svg";
 import { useState } from "react";
 import arrowLogo from "../assets/arrow.svg" 
+import deleteLogo from "/delete.svg"
 import "../styles/Sections.css";
 
 function EducationSection({sendEducationSectionDetails}) {
@@ -46,7 +47,10 @@ function EducationSection({sendEducationSectionDetails}) {
     }
 
     const EducationInstitutions = educationSectionList.map((section) => 
-        <div key={section.id} className="submittedSegment">{section.school}</div> 
+        <div className="segmentDiv">
+            <div key={section.id} className="submittedSegment">{section.school}</div>
+            <img src={deleteLogo} className="deleteLogo"/>
+        </div>
     )
 
     const AddEducationExperience = () => {
