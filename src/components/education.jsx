@@ -50,11 +50,9 @@ function EducationSection({sendEducationSectionDetails}) {
     )
 
     const AddEducationExperience = () => {
-        const newObject = setEducationSectionList(
+        setEducationSectionList(
             [...educationSectionList, form]
         )
-
-        return newObject
     }
 
     return (

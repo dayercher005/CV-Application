@@ -8,12 +8,21 @@ import './styles/App.css';
 function App() {
 
   const [generalData, setGeneralData] = useState("");
+
   const [educationData, setEducationData] = useState([{
         school: "University of Bristol",
         course: "Bachelor of Social Sciences, major in Psychology",
         date: "01/07/2015"
-    }]);
-  const [practicalData, setPracticalData] = useState("");
+  }]);
+  
+  const [practicalData, setPracticalData] = useState([{
+        company : "Accenture pte ltd",
+        position: "Senior Consultant",
+        startDate: "01/02/2020",
+        endDate: "01/02/2024",
+        description: "Junior IT Consultant with 2+ years of experience leading digital transformation projects for enterprise clients across finance and retail sectors. Expertise in cloud strategy, systems integration, and agile delivery. Adept at collaborating with stakeholders to align technology solutions with business goals. Known for bridging the gap between technical teams and executive leadership to deliver scalable and cost-effective solutions.",
+        id: crypto.randomUUID()
+  }]);
 
   const sendGeneralData = (data) => {
     setGeneralData(data)

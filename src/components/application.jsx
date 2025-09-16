@@ -11,13 +11,19 @@ function ApplicationSection(
 ) {    
     
     const EducationSectionGenerator = educationSection.map((section) =>
-        
-        <>
+        <div>
             <h4>{section.school}</h4>
             <p>{section.course}</p>
             <p>{section.date}</p>
-        </>
+        </div>
+    )
 
+    const PracticalSectionGenerator = practicalSection.map((section) =>
+        <div>
+            <h4 className="positionText">{section.position}</h4>
+            <h5 className="companyText">{section.company}</h5>
+            <p>{section.description}</p>
+        </div>
     )
 
     return (
@@ -136,21 +142,7 @@ function ApplicationSection(
                         Experience
                     </h3>
 
-                    <h4
-                        className="positionText"
-                    >
-                        {practicalSection.position}
-                    </h4>
-
-                    <h5
-                        className="companyText"
-                    >
-                        {practicalSection.company}
-                    </h5>
-
-                    <p>
-                        {practicalSection.description}
-                    </p>
+                    {PracticalSectionGenerator}
 
                 </div>
 
