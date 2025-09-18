@@ -10,7 +10,7 @@ function EducationSection({sendEducationSectionDetails}) {
         school: "University of Bristol",
         course: "Bachelor of Social Sciences, major in Psychology",
         date: "01/07/2015",
-        id: crypto.randomUUID()
+        id:""
     }]);
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
@@ -54,9 +54,9 @@ function EducationSection({sendEducationSectionDetails}) {
     )
 
     const AddEducationExperience = () => {
-        setEducationSectionList(
-            [...educationSectionList, form]
-        )
+        setEducationSectionList([
+            ...educationSectionList, form
+        ])
     }
 
     return (

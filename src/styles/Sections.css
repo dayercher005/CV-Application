@@ -235,4 +235,5 @@ input:focus{
 .deleteLogo{
     height: 1.5rem;
     width: auto;
+    margin-right: 3%;
 }
