@@ -11,7 +11,9 @@ function ApplicationSection(
 ) {    
     
     const EducationSectionGenerator = educationSection.map((section) =>
-        <div>
+        <div
+            key = {section.id}
+        >
             <h4>{section.school}</h4>
             <p>{section.course}</p>
             <p>{section.date}</p>

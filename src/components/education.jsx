@@ -6,20 +6,19 @@ import "../styles/Sections.css";
 
 function EducationSection({sendEducationSectionDetails}) {
 
-    const [educationSectionList, setEducationSectionList] = useState([{
-        school: "University of Bristol",
-        course: "Bachelor of Social Sciences, major in Psychology",
-        date: "01/07/2015",
-        id:""
-    }]);
-
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     const [form, setForm] = useState({
         school: "University of Bristol",
         course: "Bachelor of Social Sciences, major in Psychology",
-        date: "01/07/2015"
+        date: "01/07/2015",
     })
+
+    const [educationSectionList, setEducationSectionList] = useState([{
+        school: "University of Bristol",
+        course: "Bachelor of Social Sciences, major in Psychology",
+        date: "01/07/2015",
+    }]);
 
     const Toggle = () => {
         setToggleDropdown(!toggleDropdown);
@@ -38,23 +37,37 @@ function EducationSection({sendEducationSectionDetails}) {
     }
 
     const DisplayEducationSectionData = () => {
-        AddEducationExperience();
-        sendEducationSectionDetails(educationSectionList);
+        setForm((form) => {
+            const newForm = {...form, id: crypto.randomUUID()}
+            setEducationSectionList((section) => {
+                const newSectionList = {...section, newForm}
+                sendEducationSectionDetails(newSectionList)
+            })
+        })
+
+        
+        console.log(form, educationSectionList)
+        
     }
 
     const ButtonHandler = (event) => {
         event.preventDefault();
     }
 
+
     const EducationInstitutions = educationSectionList.map((section) => 
         <div className="segmentDiv">
-            <div key={section.id} className="submittedSegment">{section.school}</div>
-            <img src={deleteLogo} className="deleteLogo"/>
+            <div className="submittedSegment">{section.school}</div>
+            <img 
+                src={deleteLogo} 
+                className="deleteLogo"
+
+            />
         </div>
     )
 
     const AddEducationExperience = () => {
-        setEducationSectionList([
+        setEducationSectionList((educationSectionList) => [
             ...educationSectionList, form
         ])
     }
@@ -115,7 +128,8 @@ function EducationSection({sendEducationSectionDetails}) {
 
                     <button 
                         className="submitButton"
-                        onClick = {DisplayEducationSectionData}>
+                        onClick = {DisplayEducationSectionData}
+                    >
                         Submit
                     </button>
 
