@@ -36,17 +36,17 @@ function EducationSection({sendEducationSectionDetails}) {
         setForm({...form, date : event.target.value})
     }
 
-    const DisplayEducationSectionData = () => {
-        setForm((form) => {
-            const newForm = {...form, id: crypto.randomUUID()}
-            setEducationSectionList((section) => {
-                const newSectionList = {...section, newForm}
-                sendEducationSectionDetails(newSectionList)
-            })
+    const AddEducationExperience = () => {
+        setEducationSectionList(educationSectionList => {
+            const newSectionList = [...educationSectionList, form]
+            sendEducationSectionDetails(newSectionList)
+            return newSectionList
         })
+    }
 
-        
-        console.log(form, educationSectionList)
+    const DisplayEducationSectionData = () => {
+        AddEducationExperience();
+        console.log(educationSectionList)
         
     }
 
@@ -66,11 +66,7 @@ function EducationSection({sendEducationSectionDetails}) {
         </div>
     )
 
-    const AddEducationExperience = () => {
-        setEducationSectionList((educationSectionList) => [
-            ...educationSectionList, form
-        ])
-    }
+    
 
     return (
         <div className="formSection">

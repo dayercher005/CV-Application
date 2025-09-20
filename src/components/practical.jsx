@@ -70,7 +70,11 @@ function PracticalSection({sendPracticalSectionDetails}) {
     }
 
     const AddPracticalExperience = () => {
-        setPracticalSectionList([...practicalSectionList, section]);
+        setPracticalSectionList((practicalSectionList) => {
+            const newSectionList = [...practicalSectionList, section]
+            sendPracticalSectionDetails(newSectionList)
+            return newSectionList
+        });
     }
 
     const PracticalPositions = practicalSectionList.map((section) => 
