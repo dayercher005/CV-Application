@@ -5,13 +5,7 @@ import "../styles/Sections.css";
 
 function PracticalSection({sendPracticalSectionDetails}) {
 
-    const [practicalSectionList, setPracticalSectionList] = useState([{
-        company : "",
-        position: "",
-        startDate: "",
-        endDate: "",
-        description: ""
-    }]);
+    const [practicalSectionList, setPracticalSectionList] = useState([]);
 
     const [section, setSection] = useState({
         company : "",

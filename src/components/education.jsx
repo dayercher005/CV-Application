@@ -14,11 +14,7 @@ function EducationSection({sendEducationSectionDetails}) {
         date: "",
     })
 
-    const [educationSectionList, setEducationSectionList] = useState([{
-        school: "",
-        course: "",
-        date: "",
-    }]);
+    const [educationSectionList, setEducationSectionList] = useState([]);
 
     const Toggle = () => {
         setToggleDropdown(!toggleDropdown);
