@@ -1,5 +1,7 @@
 # CV-Application
 
+Live Preview: https://cv-application-generator-m7i3ypmsu-dayercher005s-projects.vercel.app/
+
 
 ## How to Run
 
