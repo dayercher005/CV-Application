@@ -9,12 +9,12 @@ function GeneralSection({sendGeneralSectionDetails}) {
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     const [section, setSection] = useState({
-        name: "Javier Chua",
-        email: "javierchua123@gmail.com",
-        phoneNumber: "+65 9876 5432",
-        location: "Singapore",
-        linkedin: "https://www.linkedin.com",
-        profileSummary: `Lead client engagements by identifying business challenges, developing tailored solutions, and delivering strategic recommendations to drive operational efficiency and growth. Manage cross-functional teams and collaborate with stakeholders across all levels to ensure project alignment, timely delivery, and measurable impact. Conduct in-depth data analysis, market research, and process assessments to uncover improvement opportunities and support evidence-based decision-making. Facilitate client workshops, presentations, and executive briefings to communicate findings and strategic insights.`
+        name: "",
+        email: "",
+        phoneNumber: "",
+        location: "",
+        linkedin: "",
+        profileSummary: ``
     })
 
     

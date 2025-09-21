@@ -9,15 +9,15 @@ function EducationSection({sendEducationSectionDetails}) {
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     const [form, setForm] = useState({
-        school: "University of Bristol",
-        course: "Bachelor of Social Sciences, major in Psychology",
-        date: "01/07/2015",
+        school: "",
+        course: "",
+        date: "",
     })
 
     const [educationSectionList, setEducationSectionList] = useState([{
-        school: "University of Bristol",
-        course: "Bachelor of Social Sciences, major in Psychology",
-        date: "01/07/2015",
+        school: "",
+        course: "",
+        date: "",
     }]);
 
     const Toggle = () => {
