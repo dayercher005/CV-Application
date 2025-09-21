@@ -1,8 +1,8 @@
 import educationLogo from "/education.svg";
 import { useState } from "react";
 import arrowLogo from "../assets/arrow.svg" 
-import deleteLogo from "/delete.svg"
 import "../styles/Sections.css";
+
 
 function EducationSection({sendEducationSectionDetails}) {
 
@@ -46,8 +46,6 @@ function EducationSection({sendEducationSectionDetails}) {
 
     const DisplayEducationSectionData = () => {
         AddEducationExperience();
-        console.log(educationSectionList)
-        
     }
 
     const ButtonHandler = (event) => {
@@ -58,11 +56,6 @@ function EducationSection({sendEducationSectionDetails}) {
     const EducationInstitutions = educationSectionList.map((section) => 
         <div className="segmentDiv">
             <div className="submittedSegment">{section.school}</div>
-            <img 
-                src={deleteLogo} 
-                className="deleteLogo"
-
-            />
         </div>
     )
 

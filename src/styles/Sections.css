@@ -231,14 +231,3 @@ input:focus{
 .segmentDiv *{
     background-color: var(--borderFocusColor);
 }
-
-.deleteLogo{
-    height: 1.5rem;
-    width: auto;
-    margin-right: 3%;
-    transition: transform 0.2s;
-}
-
-.deleteLogo:hover{
-    transform: translateY(-3px);
-}
